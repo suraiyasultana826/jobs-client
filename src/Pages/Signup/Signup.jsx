@@ -1,9 +1,24 @@
 
 import { Link } from 'react-router-dom';
 import signup from '../../assets/signup.png'
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
 const Signup = () => {
+    const {createUser} = useContext(AuthContext);
     const handleSignup = event => {
         event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        const url = form.url.value;
+        console.log(name, email, password, url);
+        createUser(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error => console.log(error))
     }
     return (
         <div>
@@ -24,6 +39,12 @@ const Signup = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
+                                <span className="label-text">Photo url</span>
+                            </label>
+                            <input type="url" placeholder="photo url" name='url'  className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
                             <input type="email" placeholder="email" name='email'  className="input input-bordered" required />
@@ -36,7 +57,7 @@ const Signup = () => {
                            
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary bg-blue-500" type='submit' value='Sign Up'>Sign Up</button>
+                            <button className="btn  bg-blue-500" type='submit' value='Sign Up'>Sign Up</button>
                         </div>
                     </form>
                     <p className='my-4 text-center'>Already Have an account? <Link className='text-blue-600 font-bold' to='/login'> Login</Link></p>
