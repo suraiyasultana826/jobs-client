@@ -1,8 +1,9 @@
+import TabComponents from "../../TabComponents/TabComponents";
 
 const FindJob = () => {
     return (
         <div>
-            <h3>finding a job</h3>
+           <TabComponents></TabComponents>
             
         </div>
     );

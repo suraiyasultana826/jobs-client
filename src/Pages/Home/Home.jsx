@@ -1,7 +1,9 @@
+import TabComponents from '../../TabComponents/TabComponents';
 import banner from '../../assets/banner.jpg'
 const Home = () => {
     return (
-        <div className="hero min-h-screen ">
+        <div>
+            <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img  src={banner} className="w-1/2 rounded-lg " />
           <div>
@@ -12,6 +14,13 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <h1 className="text-5xl font-bold text-center mb-20">Popular Categories</h1>
+      <div className=' flex justify-center'>
+      <TabComponents></TabComponents>
+
+      </div>
+      
+        </div>
     );
 };
 
