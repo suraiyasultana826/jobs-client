@@ -1,0 +1,33 @@
+[
+    
+      {
+        "category": "Web Development",
+        "job_title": "Front-End Developer",
+        "deadline": "2023-11-20",
+        "price_range": "$40 - $60 per hour",
+        "short_description": "Looking for an experienced front-end developer to create responsive and user-friendly web interfaces."
+      },
+      {
+        "category": "Digital Marketing",
+        "job_title": "Social Media Manager",
+        "deadline": "2023-12-05",
+        "price_range": "$2,000 - $3,000 per month",
+        "short_description": "Seeking a social media manager to strategize and manage our social media presence across various platforms."
+      },
+      {
+        "category": "Graphics Design",
+        "job_title": "Graphic Designer",
+        "deadline": "2023-11-30",
+        "price_range": "$25 - $45 per hour",
+        "short_description": "Hiring a creative graphic designer to design marketing materials, logos, and visual content for our brand."
+      },
+      {
+        "category": "Graphics Design",
+        "job_title": "Graphic Designer",
+        "deadline": "2023-11-30",
+        "price_range": "$25 - $45 per hour",
+        "short_description": "Hiring a creative graphic designer to design marketing materials, logos, and visual content for our brand."
+      }
+    
+    ]
+  

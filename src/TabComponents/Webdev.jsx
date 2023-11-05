@@ -1,8 +1,9 @@
+import JobCircular from "../Pages/Jobs/JobCircular";
 
 const Webdev = () => {
     return (
         <div>
-            <h1>webdev related jobbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</h1>
+           <JobCircular></JobCircular>
             
         </div>
     );

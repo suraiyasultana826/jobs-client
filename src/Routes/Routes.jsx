@@ -6,6 +6,7 @@ import Signup from "../Pages/Signup/Signup";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import FindJob from "../Pages/FindJob/FindJob";
 import PostJob from "../Pages/PostJob/PostJob";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
         },
         {
             path: 'postJob',
-            element: <PostJob></PostJob>
+            element: <PrivateRoute><PostJob></PostJob></PrivateRoute>
         },
       ]
     },
