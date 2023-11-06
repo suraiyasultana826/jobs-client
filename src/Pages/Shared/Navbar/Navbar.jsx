@@ -18,9 +18,12 @@ const Navbar = () => {
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
         {
-            user ?
+            user?.email ?
               
+                   <>
+                   <li ><Link to='/myBids'>My Bids</Link></li>
                     <li> <button onClick={handleSignOut} className="">Sign Out</button></li>
+                    </>
                    
                
                 : <Link to='/login'>

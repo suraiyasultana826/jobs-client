@@ -8,6 +8,7 @@ import FindJob from "../Pages/FindJob/FindJob";
 import PostJob from "../Pages/PostJob/PostJob";
 import PrivateRoute from "./PrivateRoute";
 import CheckOut from "../Pages/CheckOut/CheckOut";
+import MyBids from "../Pages/MyBids/MyBids";
 
 const router = createBrowserRouter([
     {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
             path: 'checkout/:id',
             element:<PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
             loader: ({params}) => fetch(`http://localhost:5300/webdev/${params.id}`)
+        },
+        {
+            path:'myBids',
+            element:<PrivateRoute><MyBids></MyBids></PrivateRoute>
         }
       ]
     },

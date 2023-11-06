@@ -1,9 +1,11 @@
 import { useContext } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import toast from "react-hot-toast";
 
 const CheckOut = () => {
+  const location = useLocation();
+    const navigate = useNavigate();
     const webdev = useLoaderData();
     const {_id,category, job_title, deadline, price_range,short_description, img} = webdev;
     const {user} = useContext(AuthContext)
@@ -35,6 +37,7 @@ const CheckOut = () => {
         .then(data => {
             console.log(data);
             toast.success('Bid on project successful!')
+            navigate(location?.state ? location.state : '/myBids')
 
         })
     }
