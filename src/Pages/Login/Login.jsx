@@ -37,6 +37,7 @@ const Login = () => {
         googleSignIn()
             .then((result) => {
                 console.log(result.user);
+                toast.success('Successfully Logged In!')
                 navigate(location?.state ? location.state : '/');
             })
             .catch(error => {
@@ -70,10 +71,10 @@ const Login = () => {
                             {
                                 loginError && <p className="text-red-700 mb-2"> {loginError}</p>
                             }
-                            <button className="btn  bg-blue-500 " type='submit' value='Login'>Login</button>
+                            <button className="btn  bg-blue-500 text-white " type='submit' value='Login'>Login</button>
                         </div>
                     </form>
-                    <button onClick={handleGoogle} className='btn w-3/4  mx-auto bg-pink-500'>Continue with Google</button>
+                    <button onClick={handleGoogle} className='btn w-3/4  mx-auto bg-pink-500 text-white'>Continue with Google</button>
                     <p className='my-4 text-center'>New here? <Link className='text-blue-600 font-bold' to='/signup'> Sign up</Link></p>
 
                 </div>

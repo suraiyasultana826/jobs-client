@@ -7,6 +7,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import FindJob from "../Pages/FindJob/FindJob";
 import PostJob from "../Pages/PostJob/PostJob";
 import PrivateRoute from "./PrivateRoute";
+import CheckOut from "../Pages/CheckOut/CheckOut";
 
 const router = createBrowserRouter([
     {
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
             path: 'postJob',
             element: <PrivateRoute><PostJob></PostJob></PrivateRoute>
         },
+        {
+            path: 'checkout/:id',
+            element:<CheckOut></CheckOut>,
+            loader: ({params}) => fetch(`http://localhost:5300/webdev/${params.id}`)
+        }
       ]
     },
   ]);
