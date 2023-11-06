@@ -4,6 +4,7 @@ import login from '../../assets/login.avif'
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import toast from 'react-hot-toast';
+import { AiOutlineGoogle } from 'react-icons/ai';
 
 const Login = () => {
     
@@ -74,7 +75,7 @@ const Login = () => {
                             <button className="btn  bg-blue-500 text-white " type='submit' value='Login'>Login</button>
                         </div>
                     </form>
-                    <button onClick={handleGoogle} className='btn w-3/4  mx-auto bg-pink-500 text-white'>Continue with Google</button>
+                    <button onClick={handleGoogle} className='btn w-3/4  mx-auto bg-pink-500 text-white'><AiOutlineGoogle className='w-7 h-7'></AiOutlineGoogle> Continue with Google</button>
                     <p className='my-4 text-center'>New here? <Link className='text-blue-600 font-bold' to='/signup'> Sign up</Link></p>
 
                 </div>

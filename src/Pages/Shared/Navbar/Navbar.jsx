@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import toast from "react-hot-toast";
+import { RiComputerLine} from 'react-icons/ri';
+import {  BiSolidUserCircle } from 'react-icons/bi';
 
 const Navbar = () => {
     const {user, logOut} = useContext(AuthContext);
@@ -40,7 +42,7 @@ const Navbar = () => {
                             {navItems}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <a className="btn btn-ghost normal-case text-xl"><Link to='/'><RiComputerLine className="lg:w-7 lg:h-7"></RiComputerLine>JOBS</Link></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -48,7 +50,12 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                   {
+                    user ? <div className="lg:flex justify-center items-center lg:gap-3">
+                        <p className="font-bold w-1/2 lg:w-full">{user.displayName}</p>
+                        <img className="w-10 h-10 rounded-full" src={user.photoURL} alt="" />
+                    </div> : <BiSolidUserCircle className="w-10 h-10"></BiSolidUserCircle>
+                   }
                 </div>
             </div>
 

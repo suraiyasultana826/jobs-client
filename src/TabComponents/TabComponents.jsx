@@ -16,9 +16,11 @@ const TabComponents = () => {
             <Webdev></Webdev>
             </TabPanel>
             <TabPanel>
+            <Webdev></Webdev>
                 <Digital></Digital>
             </TabPanel>
             <TabPanel>
+            <Webdev></Webdev>
                 <Graphics></Graphics>
             </TabPanel>
         </Tabs>
