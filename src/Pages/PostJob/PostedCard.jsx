@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const PostedCard = ({ myJob }) => {
@@ -43,7 +44,7 @@ const PostedCard = ({ myJob }) => {
         <p>{description}</p>
         <p>Price Range : ${minPrice} - ${maxPrice}</p>
         <div className="card-actions justify-end">
-          <button className="btn bg-blue-500 text-white ">Update</button>
+         <Link to={`update/${_id}`}> <button className="btn bg-blue-500 text-white ">Update</button></Link>
           <button onClick={() => handleDelete(_id)} className="btn bg-red-500 text-white ">Delete</button>
         </div>
       </div>
