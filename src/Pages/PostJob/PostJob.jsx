@@ -30,7 +30,7 @@ const PostJob = () => {
             if(data.insertedId){
                 Swal.fire({
                     title: 'Success!',
-                    text: 'Product added successfully',
+                    text: 'Job added successfully',
                     icon: 'success',
                     confirmButtonText: 'Cool'
                   })

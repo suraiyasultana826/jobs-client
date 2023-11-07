@@ -31,7 +31,7 @@ const Navbar = () => {
         }
         <li><Link to='/findJob'>Find A Job</Link></li>
         <li><Link to='/postJob'>Post A Job</Link></li>
-        {/* <li><Link to='/login'>My bids</Link></li> */}
+        <li><Link to='/myPostedJob'>My posted Job</Link></li>
     </>
     return (
         <div>

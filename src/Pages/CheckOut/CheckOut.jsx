@@ -50,9 +50,7 @@ const CheckOut = () => {
           <p>{short_description}</p>
           <p className="font-bold">price-Range: {price_range}</p>
           <p className="font-bold">Deadline: {deadline}</p>
-          {/* <div className="card-actions justify-end">
-            <Link to={`/checkout/${_id}`}><button className="btn bg-blue-500 text-white">Bid Now</button></Link>
-          </div> */}
+         
         </div>
       </div>
      
