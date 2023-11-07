@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import TabComponents from '../../TabComponents/TabComponents';
 import banner from '../../assets/banner.jpg'
+import PostedCard from '../PostJob/PostedCard';
 const Home = () => {
     return (
         <div>

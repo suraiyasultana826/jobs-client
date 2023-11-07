@@ -1,12 +1,11 @@
 import { useLoaderData } from "react-router-dom";
-import PostJob from "./PostJob";
 import PostedCard from "./PostedCard";
 
 const MyPostedJob = () => {
     const myJobs = useLoaderData()
     return (
         <div>
-            <h1 className="text-5xl font-bold text-center">My Posted Jobs</h1>
+            <h1 className="lg:text-5xl font-bold text-center mb-20">My Posted Jobs</h1>
           
            <div className="lg:grid lg:grid-cols-2">
            {
