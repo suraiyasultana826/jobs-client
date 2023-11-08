@@ -26,7 +26,7 @@ const BidsRow = ({bid}) => {
                             </td>
                             <td>{price_range}</td>
                             <th>
-                                <button className="btn btn-ghost btn-xs">details</button>
+                                <button className="btn btn-ghost ">Pending</button>
                             </th>
                         </tr>
             

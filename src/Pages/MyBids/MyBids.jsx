@@ -7,7 +7,7 @@ const MyBids = () => {
     const [bids, setBids] = useState([]);
     const url = `http://localhost:5300/bidWebdev?email=${user?.email}`;
     useEffect(() => {
-        fetch(url)
+        fetch(url, {credentials: 'include'})
             .then(res => res.json())
             .then(data => setBids(data))
     }, [])
