@@ -1,43 +1,10 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const PostedCard = ({ myJob, jobs, setJobs }) => {
+const PostedCard = ({ myJob,  setJobs, handleDelete }) => {
   const { _id, jobTitle, deadline, description, category, img, minPrice, maxPrice } = myJob;
 
-  const handleDelete = _id => {
-    console.log(_id);
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!"
-    }).then((result) => {
-      if (result.isConfirmed) {
-
-        fetch(`http://localhost:5300/postedJob/${_id}`, {
-          method: 'Delete'
-        })
-          .then(res => res.json())
-          .then(data => {
-            console.log(data);
-            if (data.deletedCount > 0) {
-              Swal.fire({
-                title: "Deleted!",
-                text: "Your job has been deleted.",
-                icon: "success"
-              });
-              const remaining = jobs.filter(job => job._id !== _id);
-              setJobs(remaining);
-
-            }
-          })
-      }
-    });
-
-  }
+ 
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure><img src={img} alt="Shoes" /></figure>
@@ -48,6 +15,7 @@ const PostedCard = ({ myJob, jobs, setJobs }) => {
         <div className="card-actions justify-end">
          <Link to={`/update/${_id}`}> <button className="btn bg-blue-500 text-white ">Update</button></Link>
           <button onClick={() => handleDelete(_id)} className="btn bg-red-500 text-white ">Delete</button>
+          <button disabled className="btn btn-ghost"> Bid Now</button>
         </div>
       </div>
     </div>
