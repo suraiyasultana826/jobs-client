@@ -5,7 +5,7 @@ import BidsRow from "./BidsRow";
 const MyBids = () => {
     const { user } = useContext(AuthContext);
     const [bids, setBids] = useState([]);
-    const url = `http://localhost:5300/bidWebdev?email=${user?.email}`;
+    const url = `https://assignment-eleven-server-gold.vercel.app/bidWebdev?email=${user?.email}`;
     useEffect(() => {
         fetch(url, {credentials: 'include'})
             .then(res => res.json())

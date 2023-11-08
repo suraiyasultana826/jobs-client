@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         {
             path: 'checkout/:id',
             element:<PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:5300/webdev/${params.id}`)
+            loader: ({params}) => fetch(`https://assignment-eleven-server-gold.vercel.app/webdev/${params.id}`)
         },
         {
             path:'myBids',
@@ -50,12 +50,12 @@ const router = createBrowserRouter([
         {
             path:'myPostedJob',
             element: <PrivateRoute><MyPostedJob></MyPostedJob></PrivateRoute>,
-            loader: () => fetch('http://localhost:5300/postedJob')
+            loader: () => fetch('https://assignment-eleven-server-gold.vercel.app/postedJob')
         },
         {
             path:'/update/:id',
             element: <PrivateRoute><Update></Update></PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:5300/postedJob/${params.id}`)
+            loader: ({params}) => fetch(`https://assignment-eleven-server-gold.vercel.app/postedJob/${params.id}`)
         }
       ]
     },

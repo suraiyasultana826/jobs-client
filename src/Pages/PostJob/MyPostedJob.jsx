@@ -20,7 +20,7 @@ const MyPostedJob = () => {
         }).then((result) => {
           if (result.isConfirmed) {
     
-            fetch(`http://localhost:5300/postedJob/${_id}`, {
+            fetch(`https://assignment-eleven-server-gold.vercel.app/postedJob/${_id}`, {
               method: 'Delete'
             })
               .then(res => res.json())

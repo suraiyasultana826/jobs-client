@@ -18,11 +18,11 @@ const TabComponents = () => {
             </TabPanel>
             <TabPanel>
             <Webdev></Webdev>
-                <Digital></Digital>
+                {/* <Digital></Digital> */}
             </TabPanel>
             <TabPanel>
             <Webdev></Webdev>
-                <Graphics></Graphics>
+                {/* <Graphics></Graphics> */}
             </TabPanel>
         </Tabs>
     );

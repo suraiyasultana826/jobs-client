@@ -16,7 +16,7 @@ const PostJob = () => {
         console.log(newJob);
 
         //send data to server
-        fetch('http://localhost:5300/postedJob', {
+        fetch('https://assignment-eleven-server-gold.vercel.app/postedJob', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

@@ -25,7 +25,7 @@ const CheckOut = () => {
         }
 
         console.log(bid);
-        fetch('http://localhost:5300/bidWebdev', {
+        fetch('https://assignment-eleven-server-gold.vercel.app/bidWebdev', {
             method:'POST',
             headers: {
                 'content-type': 'application/json'

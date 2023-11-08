@@ -4,7 +4,7 @@ import JobTable from "./JobTable";
 const JobCircular = () => {
     const [jobs, setJobs] = useState([]);
     useEffect( () => {
-        fetch('http://localhost:5300/webdev')
+        fetch('https://assignment-eleven-server-gold.vercel.app/webdev')
         .then(res => res.json())
         .then(data => setJobs(data))
     },[])

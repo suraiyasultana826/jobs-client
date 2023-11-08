@@ -21,7 +21,7 @@ const Update = () => {
         console.log(updatedJob);
 
         //send data to server
-        fetch(`http://localhost:5300/postedJob/${_id}`, {
+        fetch(`https://assignment-eleven-server-gold.vercel.app/postedJob/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'
